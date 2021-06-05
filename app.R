@@ -24,9 +24,11 @@ library(DT)
 ##
 
 # Connect to database
+
 # # Freyja Local
 # source("db_connection1.R")
 # dbname <- "dilac_project"
+
 # Server
 source("db_connection.R")
 dbname <- "mapdb"
@@ -285,7 +287,24 @@ svi_descs <- tibble(
   pivot_wider(names_from = desc, values_from = var)%>%
   as.list
 
-
+svi_descs_tib <- svi_descs%>%
+  as_tibble()%>%
+  pivot_longer(
+    cols=everything(),
+    names_to = "Desc",
+    values_to = "Abbr"
+  )%>%
+  mutate(
+    Unit = if_else(
+      Abbr == "EP_PCI",
+      "(USD)",
+      if_else(
+        Abbr %in% c("SPL_THEME1","SPL_THEME2","SPL_THEME3","SPL_THEME4","SPL_THEMES"),
+        "",
+        "(%)"
+      )
+    )
+  )
 
 # Define UI
 ui <- dashboardPage(
@@ -316,8 +335,9 @@ ui <- dashboardPage(
                           #              }"))
                           ),
                   tags$li(a(onclick = "openTab('home')", # Link to take you to the Service Cliff Visualization
-                            href = '../adultcliff',
-                            icon("clipboard"),
+                            #href = '../adultcliff', # Until Shrishti and I fix the shiny-adapted visualization, we're linking to the version hosted on herokuapp
+                            href = 'https://autism-cliff-viz.herokuapp.com/',
+                            icon("chart-pie"),
                             title = "Service Cliff Visualization",
                             style = "cursor: pointer;"),
                           class = "dropdown"
@@ -536,7 +556,9 @@ ui <- dashboardPage(
                               choices = c("Yes" = 0.7,"No" = 0),
                               selected = 0
                               
-                            ))
+                            ),
+                            em(style = "margin-left:10px;",
+                               "Select variables on the 'Provider Search' tab"))
                             
            ),
       menuItem("About", tabName = "about",icon = icon('info-circle')),
@@ -610,7 +632,8 @@ ui <- dashboardPage(
         p("The Provider List shows providers matching your search in table form, which can be searched, sorted, and filtered. Clicking \"Generate CSV\" in the sidebar will download a .csv file with all the providers matching your search, even if you use the filters on the table."),
         h4("Demographic Information", style = 'margin-left: 0px;'),
         p("The Demographic Information tab displays CDC/ATSDR Social Vulnerability Index data at the county and census tract level. You can also overlay the selected provider search data points."),
-        strong("Variable Definitions"),
+        strong("Available Variables"),
+        # strong("Variable Definitions"),# I didn't have time to add the definitions
         p("Persons below poverty",br(),
         "Unemployed civilians",br(),
         "Per capita income",br(),
@@ -638,13 +661,13 @@ ui <- dashboardPage(
         p("
           Programming: Freyja Brandel-Tanis"
         ),
-        p("Data Gathering: Freyja Brandel-Tanis, Shristi ., Elise Zheng, Dr. Jennifer Singh
+        p("Data Gathering: Freyja Brandel-Tanis, Shristi, Elise Zheng, Dr. Jennifer Singh
           "
         ),
         p("Grant funding provided through the ",a("Digital Integrative Liberal Arts Center",href='https://dilac.iac.gatech.edu/', target="_blank", rel="noopener noreferrer")," at the Georgia Tech Ivan Allen College of Liberal Arts"
         ),
         p(
-          "This program was made using Shiny in R v4.0.5, along with RStudio and MySQL, and is hosted using Shiny Server. The code and full list of packages is available ",a("on github.", href='https://github.com/freyja-bt/autism-service-map', target="_blank", rel="noopener noreferrer")
+          "This program was made using Shiny in R v4.0.5, along with RStudio and MySQL, and is hosted using Shiny Server. ",a("The code and full list of packages are available on github.", href='https://github.com/freyja-bt/autism-service-map', target="_blank", rel="noopener noreferrer")
         ),
         h3("Sources"),
         p("Citation tags included in parentheses for service data providers."),
@@ -1083,6 +1106,10 @@ server <- function(input, output, session) {
           )%>%
           filter(
             varC != -999.0000
+          )%>%
+          mutate(
+            desc = svi_descs_tib%>%filter(Abbr == input$sviChoice)%>%select(Desc)%>%pull,
+            unit = svi_descs_tib%>%filter(Abbr == input$sviChoice)%>%select(Unit)%>%pull
           )
       }else{
         svi_ga_tracts%>%
@@ -1091,6 +1118,10 @@ server <- function(input, output, session) {
           )%>%
           filter(
             varC != -999.0000
+          )%>%
+          mutate(
+            desc = svi_descs_tib%>%filter(Abbr == input$sviChoice)%>%select(Desc)%>%pull,
+            unit = svi_descs_tib%>%filter(Abbr == input$sviChoice)%>%select(Unit)%>%pull
           )
       }
     })
@@ -1141,7 +1172,16 @@ server <- function(input, output, session) {
           #                    textsize = "15px", direction = "auto"))%>%
             addCircleMarkers(data = reactive_db(), lat = ~ lat, lng = ~ lon, weight = 1, radius = 5,
                              fillOpacity = 0.7, color = 'blue', fillColor = 'black',
-                             label = sprintf("<strong>%s</strong><br/>%s<br/>%s<br/>%s<br/>%s", reactive_db()$name, paste("Address:",str_to_title(reactive_db()$address)), paste("Website:",reactive_db()$website), paste("Phone:",reactive_db()$phone), paste("Source:", reactive_db()$source)) %>% lapply(htmltools::HTML),
+                             popup = sprintf("<strong>%s</strong><br/>%s<br/>%s<a href=%s target='_blank', rel='noopener noreferrer'>%s</a><br/>%s<br/>%s",
+                                             reactive_db()$name,
+                                             paste("Address:",str_to_title(reactive_db()$address)),
+                                             "Website: ",
+                                             reactive_db()$website,
+                                             reactive_db()$website,
+                                             paste("Phone:",reactive_db()$phone),
+                                             paste("Source:", reactive_db()$source)
+                                             )%>%
+                               lapply(htmltools::HTML),
                              labelOptions = labelOptions(
                                  style = list("font-weight" = "normal", padding = "3px 8px", "color" = 'black'),
                                  textsize = "15px", direction = "auto"),
@@ -1167,9 +1207,9 @@ server <- function(input, output, session) {
     observe({
       
       validate(
-        need(
-          nrow(reactive_db())!=0,
-          'No service providers match'),
+        # need(
+        #   nrow(reactive_db())!=0,
+        #   'No service providers match'),
         need(input$sidebar == 'demo_vis', "o")
       )
       # max_count <- max(demVis()$varC)
@@ -1191,14 +1231,19 @@ server <- function(input, output, session) {
         clearShapes() %>%
         clearControls() %>%
         addPolygons(
-          data = demVis(), fillOpacity = 0.5, opacity = 0.5, weight = 0.2, color="black", label = sprintf("%s<br/>%f", demVis()$LOCATION, round(as.numeric(demVis()$varC),2))%>% lapply(htmltools::HTML), fillColor = ~cv_pal(demVis()$varC)
+          data = demVis(), fillOpacity = 0.5, opacity = 0.5, weight = 0.2, color="black",
+          popup = sprintf("%s<br>%s%s%s<br/>%#.2f",
+                          demVis()$LOCATION,
+                          demVis()$desc," ",
+                          demVis()$unit,
+                          # round(
+                            # as.numeric(
+                              demVis()$varC
+                              # ),
+                            #2)
+                          )%>%
+            lapply(htmltools::HTML), fillColor = ~cv_pal(demVis()$varC)
           )%>%
-        addCircleMarkers(data = reactive_db(), lat = ~ lat, lng = ~ lon, weight = 1, radius = 5, opacity = input$showProv,
-                         fillOpacity = input$showProv, color = 'blue', fillColor = 'black',
-                         label = sprintf("<strong>%s</strong><br/>%s<br/>%s<br/>%s<br/>%s", reactive_db()$name, paste("Address:", str_to_title(reactive_db()$address)), paste("Website:",reactive_db()$website), paste("Phone:",reactive_db()$phone), paste("Source:", reactive_db()$source)) %>% lapply(htmltools::HTML),
-                         labelOptions = labelOptions(
-                           style = list("font-weight" = "normal", padding = "3px 8px", "color" = 'black'),
-                           textsize = "15px", direction = "auto"))%>%
         addLegend("bottomright", pal = c_pal, values = demVis()$varC, title = sprintf("<small>%s</small>", svi_unit())
                   )
       # }else{
@@ -1234,6 +1279,40 @@ server <- function(input, output, session) {
     }#, autoDestroy = FALSE
     )
     
+    observe({
+      
+      if(input$showProv != 0){
+        validate(
+        need(
+          nrow(reactive_db())!=0,
+          'No service providers match'),
+        need(input$sidebar == 'demo_vis', "o")
+      )
+      
+      leafletProxy("demogvis")%>%
+        clearGroup('A') %>%
+        addCircleMarkers(data = reactive_db(), lat = ~ lat, lng = ~ lon, weight = 1, radius = 5, opacity = 0.7,
+                         fillOpacity = 0.7, color = 'blue', fillColor = 'black',
+                         popup = sprintf("<strong>%s</strong><br/>%s<br/>%s<a href=%s target='_blank', rel='noopener noreferrer'>%s</a><br/>%s<br/>%s",
+                                         reactive_db()$name,
+                                         paste("Address:",str_to_title(reactive_db()$address)),
+                                         "Website: ",
+                                         reactive_db()$website,
+                                         reactive_db()$website,
+                                         paste("Phone:",reactive_db()$phone),
+                                         paste("Source:", reactive_db()$source)
+                         )%>%
+                           lapply(htmltools::HTML),
+                         labelOptions = labelOptions(
+                           style = list("font-weight" = "normal", padding = "3px 8px", "color" = 'black'),
+                           textsize = "15px", direction = "auto"),
+                         group = 'A')
+      }else{
+        leafletProxy("demogvis")%>%
+        clearGroup('A')
+      }
+    })
+
     # output$result <- renderUI(
     #          downloadButton("report","Generate CSV", class = 'butt'),
     #          tags$style(".butt{color: black}")
