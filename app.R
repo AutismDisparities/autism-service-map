@@ -617,7 +617,7 @@ ui <- dashboardPage(
           "This map was conceived and designed to help people in Georgia navigate and coordinate autism services. Additionally, it provides an educational tool for those learning about the relationship between structural inequalties and location of autism services across the state of Georgia."
         ),
         p(
-          "We are unable to vet each service type or service provider in the database, so their presence in this database is not an endorsement of their efficacy, ethics, or existence. If you have feedback regarding a specific service or provider, please tell us through the feedback link. We will use this information to  continue updating the app."
+          "We are unable to vet each service type or service provider in the database, so their presence in this resource is not an endorsement of their efficacy, ethics, or existence. If you have feedback regarding a specific service or provider, please tell us through the feedback link in the sidebar. We will use this information to continue updating the app."
         ),
         h3("Using the Program"),
         p("The Autism Services Map is composed of three sections that all interact with each other: the provider search, the provider list, and the demographic information."),
@@ -681,7 +681,8 @@ ui <- dashboardPage(
       p(a("CDC/ATSDR Social Vulnerability Index (SVI) Data", href='https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html', target="_blank", rel="noopener noreferrer")),
       p("Transit stop data from ",a("OpenMobilityData", href = 'https://transitfeeds.com/', target="_blank", rel="noopener noreferrer"), " in General Transit Feed Specification (GTFS) format."),
       
-        p(em("* Starred providers are not currently integrated into the live version of the app."))
+        p(em("* Starred providers are not currently integrated into the live version of the app.")),
+      p(em("The use of an organization's data is not an endorsement of their practices, vision, mission, or their ability to vet providers. The inclusion of a provider is not an endorsement of their efficacy, ethics, or existence."))
         
         )
       )
