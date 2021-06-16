@@ -308,6 +308,7 @@ svi_descs_tib <- svi_descs%>%
 
 # Define UI
 ui <- dashboardPage(
+  # tags$style(HTML("body {font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;}")),
   # tags$style(type = "text/css", "html, body {width:100%;height:100%}",
   #              ".leaflet .legend i{
   #     border-radius: 50%;
@@ -345,10 +346,11 @@ ui <- dashboardPage(
                   ),
   # Create Dashboard Sidebar
   dashboardSidebar(
+    tags$style("body {font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;}"),
     width = 280,
     sidebarMenu(
       id = 'sidebar',
-      style = "position: relative; overflow: visible;",
+      style = "position: relative; overflow: visible; font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;",
       #style = "position: relative; overflow: visible; overflow-y:scroll",
       #style = 'height: 90vh; overflow-y: auto;',
       ## 1st tab show the Main dashboard -----------
@@ -362,7 +364,9 @@ ui <- dashboardPage(
                    max-height: 70vh;
                }"
            ),
-           tags$style("h4 {margin:  0 0 -5px 10px;}"),
+           tags$style("h4 {
+                        margin:  0 0 -5px 10px;
+                      }"),
            # Attempt to make a search function for counties and service providers
                             # selectizeInput("select_country",
                             #                "Select or search for one or multiple markets",
@@ -405,7 +409,7 @@ ui <- dashboardPage(
            
                             pickerInput(
                               inputId = "trwh",
-                              label = "Accessibly Requirements",
+                              label = "Accessibility Requirements",
                               choices = c("Transit" = "transit_access",
                                           "Wheelchair" = "wheelchair_access"
                               ),
