@@ -1,5 +1,5 @@
 #
-# GA Medicaid services for Autism
+# GA Autism Services
 # Created by Freyja Brandel-Tanis (freyjabt.me) for Dr. Jennifer Singh and funded through DILAC.
 
 library(shiny)
@@ -336,8 +336,8 @@ ui <- dashboardPage(
                           #              }"))
                           ),
                   tags$li(a(onclick = "openTab('home')", # Link to take you to the Service Cliff Visualization
-                            #href = '../adultcliff', # Until Shrishti and I fix the shiny-adapted visualization, we're linking to the version hosted on herokuapp
-                            href = 'https://autism-cliff-viz.herokuapp.com/',
+                            href = '../adultcliff',
+                            # href = 'https://autism-cliff-viz.herokuapp.com/', 
                             icon("chart-pie"),
                             title = "Service Cliff Visualization",
                             style = "cursor: pointer;"),
