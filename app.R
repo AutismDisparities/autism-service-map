@@ -1,6 +1,6 @@
 #
 # GA Autism Services
-# Created by Freyja Brandel-Tanis (freyjabt.me) for Dr. Jennifer Singh and funded through DILAC.
+# Created by Freyja Brandel-Tanis (freyjabt.me) for Dr. Jennifer Singh. Funded through DILAC.
 
 library(shiny)
 library(leaflet)
@@ -69,8 +69,8 @@ p2p_sd <- loadData(dbname,"p2p_service_details")%>% # p2p which services are off
 
 # CDC SVI 2018
 svi_ga_tracts <- st_read("svi/SVI2018_GEORGIA_tract.shp")%>%
-  st_transform(crs = 3518)%>%
-  st_simplify(500, preserveTopology = TRUE)%>%
+  # st_transform(crs = 3518)%>%
+  # st_simplify(500, preserveTopology = TRUE)%>%
   st_transform(4326)
   # st_transform('+proj=longlat +datum=WGS84')
 
@@ -554,12 +554,10 @@ ui <- dashboardPage(
                               selected = "SPL_THEMES",
                               multiple = FALSE
                             ),
-                            radioButtons(
+                            checkboxInput(
                               inputId = "showProv",
-                              label = "Show Selected Providers?",
-                              choices = c("Yes" = 0.7,"No" = 0),
-                              selected = 0
-                              
+                              label = "Show Selected Providers",
+                              value = F
                             ),
                             em(style = "margin-left:10px;",
                                "Select variables on the 'Provider Search' tab"))
@@ -1236,7 +1234,8 @@ server <- function(input, output, session) {
         clearShapes() %>%
         clearControls() %>%
         addPolygons(
-          data = demVis(), fillOpacity = 0.5, opacity = 0.5, weight = 0.2, color="black",
+          data = demVis(), fillOpacity = 0.5, opacity = 0.5, weight = 0.2,
+          smoothFactor=0.1, color="black",
           popup = sprintf("%s<br>%s%s%s<br/>%#.2f",
                           demVis()$LOCATION,
                           demVis()$desc," ",
@@ -1286,7 +1285,7 @@ server <- function(input, output, session) {
     
     observe({
       
-      if(input$showProv != 0){
+      if(input$showProv){
         validate(
         need(
           nrow(reactive_db())!=0,
