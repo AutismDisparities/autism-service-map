@@ -669,7 +669,7 @@ ui <- dashboardPage(
         p("Grant funding provided through the ",a("Digital Integrative Liberal Arts Center",href='https://dilac.iac.gatech.edu/', target="_blank", rel="noopener noreferrer")," at the Georgia Tech Ivan Allen College of Liberal Arts"
         ),
         p(
-          "This program was made using Shiny in R v4.0.5, along with RStudio and MySQL, and is hosted using Shiny Server. ",a("The code and full list of packages are available on github.", href='https://github.com/freyja-bt/autism-service-map', target="_blank", rel="noopener noreferrer")
+          "This program was made using Shiny in R v4.0.5, along with RStudio and MySQL, and is hosted using Shiny Server. ",a("The code and full list of packages are available on github.", href='https://github.com/AutismDisparities/autism-service-map', target="_blank", rel="noopener noreferrer")
         ),
         h3("Sources"),
         p("Citation tags included in parentheses for service data providers."),
