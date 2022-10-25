@@ -1,0 +1,130 @@
+stop_id,stop_name,stop_desc,stop_lat,stop_lon,wheelchair_boarding,stop_code
+10900 Medlock Bridge Rd (S),GA 141 (S) at Skyway Dr,,34.045822,-84.179349,0,400401
+11445 Johns Creek Pkwy (S),Johns Creek Pkwy (S) before Lakefield Dr North,,34.061036,-84.165776,0,400402
+17th St @ Market St,17th St at Market St,,33.791328,-84.394773,0,901242
+17th St just before Spring St,17th St just before Spring St,,33.79197,-84.388937,0,901241
+5510 Spalding Dr (S),Spalding Dr (W) at GA 141,,33.969989,-84.223192,0,400403
+5515 Spalding Dr (N),Spalding Dr (E) at GA 141,,33.970233,-84.223106,0,400404
+5664 Peachtree Parkway (N),GA 141 (N) before Scientific Dr,,33.963752,-84.224531,0,400405
+6155 Peachtree Parkway (S),GA 141 (S) before Holcomb Bridge Rd,,33.951352,-84.23486,0,400406
+Across from 11315 Johns Creek Pkwy (N),Johns Creek Pkwy (N) after Lakefield Dr South,,34.055983,-84.169842,0,400407
+Acworth P&R,Acworth Park and Ride,,34.077261,-84.65646,0,400001
+Baker St @ Peachtree St,Baker St at Peachtree St,SunTrust Plaza,33.762345,-84.387038,0,600001
+Baker St @ Williams St,Baker St at Williams St,,33.762354,-84.390278,0,400110
+BrandsMart P&R,BrandsMart Park and Ride,,33.547073,-84.285489,0,400002
+Canton P&R (Boling Park),Canton Park and Ride (Boling Park),,34.230143,-84.500621,0,400003
+Central Ave (NB) @ MLK Jr Dr,Central Ave at MLK Jr Dr,,33.751048,-84.38966,0,400100
+Central Ave @ Garnett St,Central Ave at Garnett St,,33.747591,-84.392123,0,102056
+Central Ave @ Mitchell St,Central Ave at Mitchell St,City Hall,33.749429,-84.39075,0,102060
+Central Ave @ Wall St,Central Ave at Wall St,Underground Atlanta,33.752426,-84.388379,0,600002
+Chamblee MARTA Station,Chamblee MARTA Station,,33.888911,-84.304625,0,
+Courtland @ Auburn Ave,Courtland at Auburn Ave,Louderrmilk Center,33.756244,-84.384356,0,210762
+Courtland @ Ellis St,Courtland at Ellis St,across from Sheraton Hotel,33.758706,-84.384313,0,900781
+Courtland St (SB) @ Gilmer St,Courtland St at Gilmer St,,33.753318,-84.385462,0,400112
+Cumming P&R,Cumming Park and Ride,,34.181276,-84.142807,0,400004
+Dacula P&R (Hebron Baptist Church),Dacula Park and Ride (Hebron Baptist Church),,33.998766,-83.907051,0,400005
+Douglas Multi Modal Center P&R,Douglas Multi Modal Center Park and Ride,,33.7433,-84.72623,0,400006
+Dunwoody MARTA,Douglas Multi Modal Center Park and Ride,,33.921364,-84.344273,0,400006
+East Conyers P&R (Springfield Church),East Conyers Park and Ride (Springfield Church),,33.641241,-83.986841,0,400007
+Edgewood Ave @ Peachtree Center Ave,Edgewood Ave at Peachtree Center Ave,,33.754523,-84.386166,0,400111
+Forsyth St @ MLK Jr Dr,Forsyth St at MLK Jr Dr,across from Federal Center Annex,33.752319,-84.393743,0,600004
+Forum @ 5555 Ptree Pkwy (S),GA 141 (S) before Forum Dr,,33.981076,-84.215666,0,400408
+GA 141 @ Abbotts Br ShpCtr (N),GA 141 (N) before Abbotts Bridge Rd,,34.046721,-84.178164,0,400410
+GA 141 @ Medlock Br Pkwy (N),GA 141 (N) at Medlock Bridge Pkwy,,34.029438,-84.186694,0,400411
+GA 141 @ Medlock Br Pkwy (S),GA 141 (S) at Medlock Bridge Pkwy,,34.02926,-84.187117,0,400412
+GA 141 @ Medlock Crossing ShpCtr (S),GA 141 (S) after State Bridge Rd,,34.017292,-84.190448,0,400413
+GA 141 @ Parsons Rd (N),GA 141 (N) before Parsons Rd,,34.038722,-84.184798,0,400414
+GA 141 @ Parsons Rd (S),GA 141 (S) before Parsons Rd,,34.040249,-84.18452,0,400415
+GA 141@ State Br Corners ShpCtr (N),GA 141 (N) before State Bridge Rd,,34.017145,-84.190027,0,400416
+GA 141,GA 141 (N) after Town Center Blvd,Across from The Forum (N),33.980918,-84.215216,0,400409
+Hamilton Mill P&R,Hamilton Mill Park and Ride,,34.075199,-83.921589,0,400008
+Hampton P&R (Boothe's Crossing),Hampton Park and Ride (Boothe's Crossing),,33.381501,-84.299748,0,400009
+HCA @ 5707 Peachtree Parkway (S),GA 141 (S) after Scientific Dr,,33.964197,-84.224773,0,400417
+Hewatt Rd P&R,Hewatt Rd Park and Ride,,33.839356,-84.059862,0,400010
+Hiram P&R,Hiram Park and Ride,,33.885264,-84.739201,0,400011
+Ivan Allen @ Alexander St,Ivan Allen at Alexander St,Peachtree Summit Bldg,33.76494,-84.386791,0,400101
+JC Pkwy @ Commerce Way (N),Johns Creek Pkwy (N) at Commerce Way,,34.071754,-84.165107,0,400418
+JC Pkwy @ Commerce Way (S),Johns Creek Pkwy (S) at Commerce Way,,34.07152,-84.165187,0,400419
+JC Pkwy @ E Johns Crossing (N),Johns Creek Pkwy (N) at East Johns Crossing,,34.06321,-84.164597,0,400420
+JC Pkwy @ E Johns Crossing (S),Johns Creek Pkwy (S) at East Johns Crossing,,34.063521,-84.164779,0,400421
+JC Pkwy @ Johns Creek Ct (N),Johns Creek Pkwy (N) at Johns Creek Ct,,34.068258,-84.161861,0,400422
+JC Pkwy @ Johns Creek Ct (S),Johns Creek Pkwy (S) at Johns Creek Ct,,34.068614,-84.162473,0,400423
+John Portman Blvd @ Peachtree St,John Portman Blvd at Peachtree St,Peachtree Center,33.760918,-84.387842,0,400102
+John Portman Blvd just past Peachtree Center Ave,John Portman Blvd just past Peachtree Center Ave,,33.760942,-84.384443,0,600005
+Johnson Ferry Rd at Hollis Cobb Dr,Johnson Ferry Rd at Trimble Rd,,33.907863,-84.355066,0,400311
+Johnson Ferry Rd at Trimble Rd,Johnson Ferry Rd at Trimble Rd,,33.906751,-84.359871,0,400311
+Jonesboro P&R,Jonesboro Park and Ride,,33.524295,-84.362083,0,400012
+Lindbergh Center MARTA Station,Lindbergh Center MARTA Station,,33.821283,-84.368982,0,
+Linden Avenue before West Peachtree St,Linden Avenue before West Peachtree,,33.76978,-84.38709,0,400216
+Mall of Georgia P&R,Mall of Georgia Park and Ride,,34.067495,-83.982811,0,400013
+McDonough P&R,McDonough Park and Ride,,33.416872,-84.181227,0,400014
+Medical Center MARTA Station,Medical Center MARTA Station,,33.910867,-84.351482,0,
+Mitchell St (EB) @ Forsyth St,Mitchell St at Forsyth St,,33.751781,-84.394529,0,400103
+Mitchell St (EB) @ Peachtree St,Mitchell St at Peachtree St,,33.751066,-84.39323,0,102534
+MLK Jr Dr just before Peachtree St,MLK Jr Dr just before Peachtree St,Fulton County Government Center,33.751908,-84.391673,0,102156
+Newnan P&R,Newnan Park and Ride,,33.403707,-84.723119,0,400015
+North Ave (EB) @ Peachtree St,North Ave at Peachtree St,North AVenue MARTA Station,33.771284,-84.385403,0,400200
+Panola Rd P&R,Panola Rd Park and Ride,,33.702198,-84.173405,0,400016
+Peachtree Center Ave @ Andrew Young International Blvd,Peachtree Center Ave at Andrew Young International Blvd,,33.759437,-84.385997,0,900786
+Peachtree Center Ave @ Auburn Ave,Peachtree Center Ave at Auburn Ave,Loudermilk Center,33.755325,-84.38604,0,600006
+Peachtree Center Ave @ John Wesley Dobbs Ave,Peachtree Center Ave at John Wesley Dobbs Ave,Ga-Pacific Bldg,33.756948,-84.386029,0,210155
+Peachtree Center Ave between Baker & Peachtree,Peachtree Center Ave between Baker & Peachtree,,33.763522,-84.385911,0,211546
+Peachtree St (NB) @ MARTA Five Points Station,Peachtree St at MARTA Five Points Station,,33.753418,-84.390793,0,211645
+Peachtree St (NB) @ Renaissance Pkwy,Peachtree St at Renaissance Pkwy,,33.768324,-84.385258,0,400215
+Peachtree St @ Baker St,Peachtree St at Baker St,across from SunTrust Plaza,33.762541,-84.387413,0,900725
+Peachtree-Dunwoody RD (NB) @ Concourse Pkwy,Peachtree St at Baker St,,33.916067,-84.351139,0,900725
+Peachtree-Dunwoody RD (SB) @ Concourse Pkwy,Peachtree St at Baker St,,33.916886,-84.351407,0,900725
+Perimeter Center Pkwy (N),Perimeter Center Pkwy (N),,33.927589,-84.34409,0,400304
+Perimeter Center Pkwy (S),Perimeter Center Pkwy (S),,33.927486,-84.344202,0,400305
+Perimeter Center Pkwy Office Park (N),Perimeter Center Pkwy Office Park (N),,33.925558,-84.345089,0,400306
+Perimeter Center Pkwy Office Park (S),Perimeter Center Pkwy Office Park (S),,33.925595,-84.345206,0,400307
+Powder Springs P&R,Powder Springs Park and Ride,,33.867511,-84.701564,0,400017
+Pryor St (SB) @ Garnett St,Pryor St at Garnett St,,33.748309,-84.393414,0,102028
+Pryor St (SB) @ Mitchell St,Pryor St at Mitchell St,,33.750716,-84.391505,0,400104
+Pryor St @ MLK Jr Dr,Pryor St at MLK Jr Dr,,33.751614,-84.390932,0,400108
+Pryor St @ Wall St,Pryor St at Wall St,,33.753409,-84.389415,0,400109
+Publix,GA 141 (N) after Holcomb Bridge Rd,Across from 6135 Peachtree Pkwy(N),33.951771,-84.234281,0,400424
+Riverdale P&R,Riverdale Park and Ride,,33.567949,-84.403474,0,400018
+Sandy Springs MARTA Station,Sandy Springs MARTA Station,,33.932207,-84.35076,0,
+Snellville P&R,Snellville Park and Ride,,33.853791,-84.015445,0,400019
+Spring St (NB) @ Brotherton St,Spring St at Brotherton St,,33.74875,-84.397972,0,211005
+Spring St @ 17th St,Spring St at 17th St,,33.79032,-84.38942,0,400203
+Spring St @ 5th St,Spring St at 5th St,GA Tech Technology Square,33.777025,-84.388905,0,400204
+Spring St just before Linden Ave,Spring St just before Linden Ave,One Georgia Center,33.770733,-84.388964,0,400205
+Stockbridge P&R,Stockbridge Park and Ride,,33.54817,-84.27899,0,400020
+Stone Mountain P&R,Stone Mountain Park and Ride,,33.822414,-84.109955,0,400021
+Sugarloaf Mills P&R (GCT),Sugarloaf Mills Park and Ride (GCT),,33.983354,-84.084072,0,60013
+Sugarloaf Mills P&R,Sugarloaf Mills Park and Ride,,33.984275,-84.079485,0,400022
+Ted Turner (NB) @ West Peachtree Place,Sugarloaf Mills Park and Ride (GCT),,33.763834,-84.388905,0,60013
+Ted Turner Dr (NB) @ Mitchell St,Ted Turner Dr at Mitchell St,,33.752209,-84.395785,0,400105
+Ted Turner Dr (SB) @ Brotherton St,Ted Turner Dr at Brotherton St,,33.749188,-84.398035,0,102554
+Thornton Rd @ Bankhead Hwy N,Thornton Rd (N) at Bankhead Hwy,,33.79756,-84.643586,0,400502
+Thornton Rd @ Bankhead Hwy,Thornton Rd (S) at Bankhead Hwy,,33.797346,-84.643672,0,400501
+Thornton Rd @ Maxham Rd N,Thornton Rd (N) at Maxham Rd,,33.789759,-84.623791,0,400504
+Thornton Rd @ Maxham Rd,Thornton Rd (S) at Maxham Rd,,33.789375,-84.623716,0,400503
+Thornton Rd @ N Blairs Bridge Rd N,Thornton Rd (N) at North Blairs Bridge Rd,,33.779558,-84.606882,0,400505
+Thornton Rd @ N Blairs Bridge Rd S,Thornton Rd (S) at North Blairs Bridge Rd,,33.779477,-84.607226,0,400506
+Thornton Rd @ Oak Ridge Rd,Thornton Rd at Oak Ridge Rd,,33.783392,-84.609768,0,400507
+Thornton Rd @ Skyview Dr,Thornton Rd at Skyview Dr,,33.781939,-84.608867,0,400508
+Thornton Rd @ Westfork Blvd,Thornton Rd at Westfork Blvd,,33.792291,-84.6301,0,400509
+Town Center/Big Shanty P&R,Town Center/Big Shanty Park and Ride,,34.027571,-84.570565,0,400023
+Triangle Pkwy at Metric Dr (N),Triangle Pkwy (N) at Metric Dr,,33.975306,-84.223927,0,400425
+Triangle Pkwy at Metric Dr (S),Triangle Pkwy (S) at Metric Dr,,33.975356,-84.224289,0,400426
+Union City P&R,Union City Park and Ride,,33.586694,-84.512458,0,400024
+W Johns Crossing @ Emory Hospital,West Johns Crossing at Emory Hospital,,34.067414,-84.174918,0,400427
+W Peachtree St @ 12th St,W Peachtree St at 12th St,,33.784253,-84.387823,0,400206
+W Peachtree St @ 5th St,W Peachtree St at 5th St,,33.776089,-84.387242,0,600012
+W Peachtree St @ Arts Center MARTA Station,W Peachtree St at Arts Center MARTA Station,,33.789215,-84.387692,0,400208
+W Peachtree St @ Civic Center MARTA Station (northbound),W Peachtree St at Civic Center MARTA Station (northbound),,33.766153,-84.387478,0,600007
+W Peachtree St @ Civic Center MARTA Station (southbound),W Peachtree St at Civic Center MARTA Station (southbound),,33.766144,-84.387585,0,600008
+W Peachtree St @ Peachtree Pl,W Peachtree St at Peachtree Pl,Midtown MARTA Station,33.780546,-84.387431,0,600011
+W Peachtree St @ Ponce de Leon Ave,W Peachtree St at Ponce de Leon Ave,North Ave MARTA Station,33.77212,-84.387263,0,600013
+W Peachtree St after 14 St,W Peachtree St after 14 St,1201 W Peachtree St,33.78695,-84.387714,0,600014
+Wall St (EB) @ Central Ave,Wall St at Central Ave,,33.752669,-84.388532,0,400106
+Washington St @ MLK Jr Dr,Washington St at MLK Jr Dr,State Capitol,33.750312,-84.3884,0,400113
+"West Conyers P&R (Sigman Rd, Downtown)","West Conyers Park and Ride (Sigman Rd, Downtown)",,33.68513,-84.058896,0,400025
+"West Conyers P&R (Sigman Rd, Midtown)","West Conyers Park and Ride (Sigman Rd, Midtown)",,33.685133,-84.056684,0,400026
+"West Conyers P&R (Sigman Rd, Perimeter)","West Conyers Park and Ride (Sigman Rd, Perimeter)",,33.685086,-84.056976,0,400027
+West Douglas P&R,West Douglas Park and Ride,,33.723269,-84.773523,0,400028
+Williams St @ Baker St,Williams St at Baker St,,33.762461,-84.390664,0,400107
+Woodstock P&R (His Hands Church),Woodstock Park and Ride (His Hands Church),,34.081563,-84.541754,0,400029
